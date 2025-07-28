@@ -1,0 +1,17 @@
+<div id="dashboard">
+    <h2>Order Management Dashboard</h2>
+    <section>
+        <h3>Upcoming Orders</h3>
+        <ul>
+            <li>Order 1 - Date</li>
+            <li>Order 2 - Date</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Order History</h3>
+        <ul>
+            <li>Past Order 1</li>
+            <li>Past Order 2</li>
+        </ul>
+    </section>
+</div>

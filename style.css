@@ -1,0 +1,425 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Dynamic gradient background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Navbar */
+#navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#navbar .logo::first-letter {
+    text-transform: uppercase;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#navbar ul li a:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('images/pexels-rdne-7685843.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-align: left;
+    position: relative;
+    margin-top: 0;
+    padding-left: 100px;
+     /* Parallax effect */
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+#hero h1 {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+#hero p {
+    font-size: 1em;
+    color: #eee;
+    margin-bottom: 0.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: capitalize;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        margin: 5px 0;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+}
+
+/* Menu Section Styles */
+#menu {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+     /* Parallax effect */
+    background-attachment: fixed;
+}
+
+.menu-content {
+    width: 80%;
+    margin: 0 auto; /* Center the content */
+}
+
+.menu-content h2 {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: serif; /* Elegant font */
+    color: #e44d26; /* Orange-red color */
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    letter-spacing: 1px;
+}
+
+.menu-content .menu-description {
+    font-size: 1.2em;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 1.5em;
+}
+
+.menu-categories h3 {
+    font-size: 2em;
+    color: #e44d26;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #e44d26;
+    padding-bottom: 0.3em;
+    font-family: serif;
+}
+
+.veg-menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.veg-menu-items li {
+    padding: 0.5em 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.veg-menu-items li:last-child {
+    border-bottom: none;
+}
+
+
+#gallery {
+    padding: 50px;
+    text-align: center;
+    background-color: #F2F2F2;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+     /* Parallax effect */
+    background-attachment: fixed;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery-item {
+    margin: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     transition: transform 0.3s ease; /* Animation */
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.gallery-item p {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#about {
+    padding: 50px;
+    text-align: center;
+    background-color: #E5E5E5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+     /* Parallax effect */
+    background-attachment: fixed;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.about-text {
+    padding: 20px;
+}
+
+#testimonials {
+    padding: 50px;
+    text-align: center;
+    background-color: #F7F7F7;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+     /* Parallax effect */
+    background-attachment: fixed;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.testimonial {
+    margin: 20px;
+    padding: 10px;
+    background-color: #E5E5E5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+   /* Contact Section */
+   #contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #F2F2F2;
+    border-top: 1px solid #ddd;
+     /* Parallax effect */
+    background-attachment: fixed;
+}
+
+#contact form {
+    max-width: 400px;
+    margin: auto;
+    background-color: #E5E5E5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #444444;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    #navbar ul li {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .about-container, .testimonial-container {
+        flex-direction: column;
+    }
+}
+.book-now-button {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* To allow setting padding and margins */
+     transition: background-color 0.3s ease, transform 0.3s ease; /* Animation */
+}
+
+.book-now-button:hover {
+    background-color: #128C7E; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
